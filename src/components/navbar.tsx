@@ -3,11 +3,11 @@ import Image from "next/image";
 
 export default function Navbar() {
   return (
-    <header className="w-full border-b border-gray-200 bg-white">
-      <div className="mx-auto max-w-7xl px-8 h-18 flex items-center justify-between">
+    <header className="w-full h-18 border-b border-gray-200 bg-white">
+      <div className="mx-auto max-w-7xl px-8 h-full flex items-center justify-between">
 
-        {/* Logo (far left) */}
-        <Link href="/" className="">
+        {/* Logo */}
+        <Link href="/">
           <Image
             src="/images/gcd_logo.png"
             alt="Global Cleantech Directory"
@@ -19,6 +19,7 @@ export default function Navbar() {
 
         {/* Navigation */}
         <nav className="flex items-center gap-8 text-sm tracking-wide">
+
           <Link
             href="/"
             className="uppercase text-gray-800 hover:text-green-600 transition"
@@ -27,33 +28,12 @@ export default function Navbar() {
           </Link>
 
           <Link
-            href="/identity"
+            href="/dashboard"
             className="uppercase text-gray-800 hover:text-green-600 transition"
           >
-            Identity
+            Conversations
           </Link>
 
-          <Link
-            href="/innovation"
-            className="uppercase text-gray-800 hover:text-green-600 transition"
-          >
-            Innovation
-          </Link>
-
-          {/* Explore Hub (active) */}
-          <Link
-            href="/help"
-            className="uppercase text-gray-800 hover:text-green-600 transition"
-          >
-            Explore Hub
-          </Link>
-
-          <Link
-            href="/help"
-            className="uppercase text-gray-800 hover:text-green-600 transition"
-          >
-            Help
-          </Link>
         </nav>
       </div>
     </header>
